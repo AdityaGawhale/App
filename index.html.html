@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+</head>
+<title> Number Converter </title>
+</head>
+<body>
+<center>
+<h1>Number Converter</h1>
+<h3>Enter number here:</h3>
+<input type="number" name = "number" id="num" onkeyup="myFunction()">
+<p>Binary number is: <span id="bin"></span>
+<br>
+Decimal number is: <span id="dec"></span>
+<br>
+HexaDecimal number is:<span id="hex"></span>
+<br>
+Octal number is:<span id="oct"></span>
+</p>
+</center>
+<script>
+function myFunction()
+{
+  var a = parseInt(document.getElementById("num").value);
+  var b = parseInt(a,10).toString(16);
+  document.getElementById("hex").innerHTML=b;
+  
+  var c = parseInt(a,10).toString(2);
+  document.getElementById("bin").innerHTML=c;
+ 
+  var d = parseInt(a,10).toString(10);
+  document.getElementById("dec").innerHTML=d;
+
+  var e = parseInt(a,10).toString(8);
+  document.getElementById("oct").innerHTML=e;
+}
+
+
+</script>
+</body>
+</html>
